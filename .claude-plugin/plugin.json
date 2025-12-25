@@ -26,7 +26,17 @@
     "./commands/forge",
     "./commands/team"
   ],
-  "agents": "./agents",
+  "agents": [
+    "./agents/atlas-orchestrator.md",
+    "./agents/sage-product.md",
+    "./agents/forge-architect.md",
+    "./agents/pixel-design.md",
+    "./agents/canvas-frontend.md",
+    "./agents/rust-backend.md",
+    "./agents/bridge-protocols.md",
+    "./agents/sentinel-qa.md",
+    "./agents/pipeline-devops.md"
+  ],
   "skills": "./skills",
   "hooks": "./hooks/hooks.json",
   "mcpServers": "./.mcp.json"
