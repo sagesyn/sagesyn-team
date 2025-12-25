@@ -17,7 +17,7 @@ When this command is invoked, provide a comprehensive team status report:
    - Indicate milestone completion status
 
 2. **Agent Team Overview**
-   - List all 9 agents with their roles and colors
+   - List all agents organized by category
    - Show effort allocation for current phase
    - Highlight which agents are most active this phase
 
@@ -53,17 +53,38 @@ When this command is invoked, provide a comprehensive team status report:
 
 ## Agent Team
 
-| Agent | Role | Color | Phase 1 Effort | Focus |
-|-------|------|-------|----------------|-------|
-| ATLAS | Orchestrator | #f59e0b | 100% | Coordination |
-| SAGE | Product | #8b5cf6 | 40% | Language spec docs |
-| FORGE | Architect | #ef4444 | 100% | System design |
-| PIXEL | UX/Design | #ec4899 | 60% | Design system |
-| CANVAS | Frontend | #3b82f6 | 100% | IDE foundation |
-| RUST | Backend | #f97316 | 100% | Parser & compiler |
-| BRIDGE | Protocols | #14b8a6 | 20% | Protocol research |
-| SENTINEL | QA | #22c55e | 40% | Test framework |
-| PIPELINE | DevOps | #64748b | 80% | CI/CD setup |
+### Leadership
+| Agent | Role | Phase 1 Effort | Focus |
+|-------|------|----------------|-------|
+| ATLAS | Orchestrator | 100% | Coordination |
+
+### Product & Design
+| Agent | Role | Phase 1 Effort | Focus |
+|-------|------|----------------|-------|
+| SAGE | Product | 40% | Language spec docs |
+| PIXEL | UX/Design | 60% | Design system |
+| SCRIBE | Documentation | 60% | API docs, tutorials |
+
+### Engineering
+| Agent | Role | Phase 1 Effort | Focus |
+|-------|------|----------------|-------|
+| FORGE | Architect | 100% | System design |
+| RUST | Backend | 100% | Parser & compiler |
+| CANVAS | Frontend | 100% | IDE foundation |
+| BRIDGE | Protocols | 20% | Protocol research |
+
+### Quality & Security
+| Agent | Role | Phase 1 Effort | Focus |
+|-------|------|----------------|-------|
+| SENTINEL | QA | 40% | Test framework |
+| VAULT | Security | 40% | Threat modeling |
+
+### Operations & Growth
+| Agent | Role | Phase 1 Effort | Focus |
+|-------|------|----------------|-------|
+| PIPELINE | DevOps | 80% | CI/CD setup |
+| NEXUS | Developer Relations | 20% | Examples |
+| HERALD | Marketing | 20% | Messaging |
 
 ### High-Priority Agents (Phase 1)
 - **FORGE** - Designing compiler architecture
@@ -87,12 +108,25 @@ When this command is invoked, provide a comprehensive team status report:
 
 After showing status, help the user engage the right agent:
 
+### Leadership
 - **Planning work?** → Use ATLAS (`atlas-orchestrator`)
-- **Architecture decisions?** → Use FORGE (`forge-architect`)
-- **Rust implementation?** → Use RUST (`rust-backend`)
+
+### Product & Design
 - **Requirements/specs?** → Use SAGE (`sage-product`)
 - **UI/UX design?** → Use PIXEL (`pixel-design`)
+- **Documentation?** → Use SCRIBE (`scribe-documentation`)
+
+### Engineering
+- **Architecture decisions?** → Use FORGE (`forge-architect`)
+- **Rust implementation?** → Use RUST (`rust-backend`)
 - **Frontend code?** → Use CANVAS (`canvas-frontend`)
 - **Protocol work?** → Use BRIDGE (`bridge-protocols`)
+
+### Quality & Security
 - **Testing?** → Use SENTINEL (`sentinel-qa`)
+- **Security review?** → Use VAULT (`vault-security`)
+
+### Operations & Growth
 - **CI/CD?** → Use PIPELINE (`pipeline-devops`)
+- **Community/Examples?** → Use NEXUS (`nexus-devrel`)
+- **Marketing/Messaging?** → Use HERALD (`herald-marketing`)

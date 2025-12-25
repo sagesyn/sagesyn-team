@@ -21,15 +21,15 @@ interface Agent {
   id: string;
   name: string;
   role: string;
+  category: string;
   scope: string;
   color: string;
   skills: string[];
-  phase1: number;
-  phase2: number;
-  phase3: number;
-  phase4: number;
+  phases: Record<string, number>;
   collaborates: string[];
   outputs: string[];
+  primaryRepo: string | null;
+  secondaryRepos: string[];
 }
 
 interface Milestone {
@@ -58,10 +58,13 @@ function loadData<T>(filename: string): T {
 const agents = loadData<Agent[]>("agents.json");
 const roadmap = loadData<RoadmapPhase[]>("roadmap.json");
 
+// Generate dynamic agent ID list for tool descriptions
+const agentIdList = agents.map((a) => a.id).join(", ");
+
 // Create MCP server
 const server = new McpServer({
   name: "sagesyn-context",
-  version: "0.1.0",
+  version: "0.2.0",
 });
 
 // Tool: Get agent context
@@ -71,9 +74,7 @@ server.tool(
   {
     agentId: z
       .string()
-      .describe(
-        "Agent ID (atlas, sage, forge, pixel, canvas, rust, bridge, sentinel, pipeline)"
-      ),
+      .describe(`Agent ID (${agentIdList})`),
   },
   async ({ agentId }) => {
     const agent = agents.find((a) => a.id === agentId);
@@ -95,8 +96,7 @@ server.tool(
 
     // Get current phase (Phase 1 for now)
     const currentPhase = roadmap.find((p) => p.id === 1);
-    const effortKey = `phase${currentPhase?.id || 1}` as keyof Agent;
-    const currentEffort = agent[effortKey] as number;
+    const currentEffort = agent.phases[String(currentPhase?.id || 1)] || 0;
 
     return {
       content: [
@@ -138,7 +138,7 @@ server.tool(
             type: "text" as const,
             text: JSON.stringify({
               error: `Phase ${phaseId} not found`,
-              validPhases: [1, 2, 3, 4],
+              validPhases: roadmap.map((p) => p.id),
             }),
           },
         ],
@@ -147,12 +147,12 @@ server.tool(
 
     // Get agent efforts for this phase
     const agentEfforts = agents.map((agent) => {
-      const effortKey = `phase${phaseId}` as keyof Agent;
       return {
         id: agent.id,
         name: agent.name,
         role: agent.role,
-        effort: agent[effortKey] as number,
+        category: agent.category,
+        effort: agent.phases[String(phaseId)] || 0,
       };
     });
 
@@ -182,8 +182,9 @@ server.tool(
       id: agent.id,
       name: agent.name,
       role: agent.role,
+      category: agent.category,
       color: agent.color,
-      currentEffort: agent.phase1,
+      currentEffort: agent.phases["1"] || 0,
       skills: agent.skills,
     }));
 
@@ -194,6 +195,9 @@ server.tool(
     const highPriority = teamOverview
       .filter((a) => a.currentEffort >= 80)
       .map((a) => a.name);
+
+    // Group by category
+    const categories = [...new Set(agents.map((a) => a.category))];
 
     return {
       content: [
@@ -210,6 +214,7 @@ server.tool(
                 }
               : null,
             team: teamOverview,
+            categories,
             highPriorityAgents: highPriority,
             totalAgents: agents.length,
           }),
@@ -237,7 +242,10 @@ server.tool(
           content: [
             {
               type: "text" as const,
-              text: JSON.stringify({ error: `Agent '${agentId}' not found` }),
+              text: JSON.stringify({
+                error: `Agent '${agentId}' not found`,
+                validAgentIds: agentIdList,
+              }),
             },
           ],
         };
@@ -329,6 +337,7 @@ server.tool(
               id: a.id,
               name: a.name,
               role: a.role,
+              category: a.category,
               matchingSkills: a.skills.filter((s) =>
                 s.toLowerCase().includes(skillLower)
               ),

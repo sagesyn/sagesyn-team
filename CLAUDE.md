@@ -1,6 +1,6 @@
 # SageSyn Team Plugin - Claude Code Instructions
 
-This is a Claude Code plugin that provides 9 specialized AI agents for building the SageSyn Agent Programming Language ecosystem.
+This is a Claude Code plugin that provides specialized AI agents for building the SageSyn Agent Programming Language ecosystem.
 
 ## Quick Start
 
@@ -8,11 +8,38 @@ Use `/team-status` to see the current team overview and roadmap phase.
 
 ## Available Agents
 
+### Leadership
 | Agent | Role | When to Use |
 |-------|------|-------------|
 | ATLAS | Orchestrator | Project coordination, sprint planning, ADRs |
+
+### Product & Design
+| Agent | Role | When to Use |
+|-------|------|-------------|
+| SAGE | Product | Requirements, specs, user stories |
+| PIXEL | UX/Design | Interface design, components |
+| SCRIBE | Documentation | API docs, tutorials, guides |
+
+### Engineering
+| Agent | Role | When to Use |
+|-------|------|-------------|
 | FORGE | Architect | System design, API specs, technical decisions |
 | RUST | Backend | Rust implementation, parser, compiler, Tauri |
+| CANVAS | Frontend | React, XY Flow, Monaco, TypeScript |
+| BRIDGE | Protocols | MCP, A2A, AG-UI integration |
+
+### Quality & Security
+| Agent | Role | When to Use |
+|-------|------|-------------|
+| SENTINEL | QA | Testing, code review |
+| VAULT | Security | Threat modeling, security audits |
+
+### Operations & Growth
+| Agent | Role | When to Use |
+|-------|------|-------------|
+| PIPELINE | DevOps | CI/CD, releases, infrastructure |
+| NEXUS | Developer Relations | Community, examples, evangelism |
+| HERALD | Marketing | Messaging, announcements, content |
 
 ## Available Commands
 
@@ -35,6 +62,22 @@ The `sagesyn-context` MCP server provides:
 - `get_team_status` - Team overview
 - `get_agent_collaborations` - Collaboration matrix
 - `search_agents_by_skill` - Find agents by capability
+
+## Repositories
+
+The SageSyn ecosystem spans multiple repositories:
+
+| Repository | Description | Primary Agents |
+|------------|-------------|----------------|
+| `sagesyn-lang` | Core language compiler | FORGE, RUST |
+| `sagesyn-lsp` | Language server | RUST, FORGE |
+| `sagesyn-vscode` | VSCode extension | CANVAS, PIXEL |
+| `sagesyn-ide` | Visual IDE | CANVAS, RUST, PIXEL |
+| `sagesyn-website` | Documentation site | CANVAS, SCRIBE |
+| `sagesyn-protocols` | Protocol adapters | BRIDGE, RUST |
+| `sagesyn-registry` | Package registry | RUST, CANVAS |
+| `sagesyn-examples` | Example projects | NEXUS, SCRIBE |
+| `sagesyn-team` | This plugin | ATLAS |
 
 ## Project Context
 
@@ -62,6 +105,15 @@ Key Milestones:
 - **Planning/Coordinating?** → ATLAS
 - **Architecture/Design?** → FORGE
 - **Rust/Compiler work?** → RUST
+- **Frontend/IDE?** → CANVAS
+- **UI/UX Design?** → PIXEL
+- **Documentation?** → SCRIBE
+- **Protocol work?** → BRIDGE
+- **Testing/QA?** → SENTINEL
+- **Security review?** → VAULT
+- **CI/CD?** → PIPELINE
+- **Community/Examples?** → NEXUS
+- **Marketing/Messaging?** → HERALD
 
 ## Development Workflow
 

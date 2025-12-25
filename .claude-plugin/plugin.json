@@ -1,7 +1,7 @@
 {
   "name": "sagesyn-team",
-  "version": "0.1.0",
-  "description": "SageSyn Agent Team - 9 specialized AI agents for building the Agent Programming Language ecosystem",
+  "version": "0.2.0",
+  "description": "SageSyn Agent Team - Specialized AI agents for building the Agent Programming Language ecosystem",
   "author": {
     "name": "SageSyn",
     "email": "team@sagesyn.ai",
@@ -35,7 +35,11 @@
     "./agents/rust-backend.md",
     "./agents/bridge-protocols.md",
     "./agents/sentinel-qa.md",
-    "./agents/pipeline-devops.md"
+    "./agents/pipeline-devops.md",
+    "./agents/scribe-documentation.md",
+    "./agents/nexus-devrel.md",
+    "./agents/vault-security.md",
+    "./agents/herald-marketing.md"
   ],
   "skills": "./skills",
   "hooks": "./hooks/hooks.json",

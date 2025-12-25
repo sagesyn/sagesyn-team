@@ -1,22 +1,59 @@
 # SageSyn Team
 
-A Claude Code plugin providing 9 specialized AI agents for building the SageSyn Agent Programming Language ecosystem.
+A Claude Code plugin providing specialized AI agents for building the SageSyn Agent Programming Language ecosystem.
 
 ## Overview
 
-SageSyn Team implements a multi-agent development workflow where each agent has a specific role:
+SageSyn Team implements a multi-agent development workflow organized by function:
 
+### Leadership
 | Agent | Role | Color | Focus |
 |-------|------|-------|-------|
 | ATLAS | Orchestrator | #f59e0b | Project coordination, sprint planning |
+
+### Product & Design
+| Agent | Role | Color | Focus |
+|-------|------|-------|-------|
 | SAGE | Product | #8b5cf6 | Requirements, specs, user stories |
-| FORGE | Architect | #ef4444 | System design, API contracts |
 | PIXEL | UX/Design | #ec4899 | Interface design, components |
-| CANVAS | Frontend | #3b82f6 | React, XY Flow, Monaco |
+| SCRIBE | Documentation | #a855f7 | API docs, tutorials, guides |
+
+### Engineering
+| Agent | Role | Color | Focus |
+|-------|------|-------|-------|
+| FORGE | Architect | #ef4444 | System design, API contracts |
 | RUST | Backend | #f97316 | Compiler, runtime, Tauri |
+| CANVAS | Frontend | #3b82f6 | React, XY Flow, Monaco |
 | BRIDGE | Protocols | #14b8a6 | MCP, A2A, AG-UI |
-| SENTINEL | QA | #22c55e | Testing, security |
+
+### Quality & Security
+| Agent | Role | Color | Focus |
+|-------|------|-------|-------|
+| SENTINEL | QA | #22c55e | Testing, code review |
+| VAULT | Security | #dc2626 | Threat modeling, audits |
+
+### Operations & Growth
+| Agent | Role | Color | Focus |
+|-------|------|-------|-------|
 | PIPELINE | DevOps | #64748b | CI/CD, releases |
+| NEXUS | Developer Relations | #06b6d4 | Community, examples |
+| HERALD | Marketing | #eab308 | Messaging, announcements |
+
+## Repositories
+
+The SageSyn ecosystem spans multiple repositories:
+
+| Repository | Description | Tech Stack | Primary Agents |
+|------------|-------------|------------|----------------|
+| [sagesyn-lang](https://github.com/sagesyn/sagesyn-lang) | Core language compiler | Rust | FORGE, RUST, SENTINEL |
+| [sagesyn-lsp](https://github.com/sagesyn/sagesyn-lsp) | Language server | Rust (tower-lsp) | RUST, FORGE |
+| [sagesyn-vscode](https://github.com/sagesyn/sagesyn-vscode) | VSCode extension | TypeScript | CANVAS, PIXEL |
+| [sagesyn-ide](https://github.com/sagesyn/sagesyn-ide) | Visual IDE | Tauri + React | CANVAS, RUST, PIXEL |
+| [sagesyn-website](https://github.com/sagesyn/sagesyn-website) | Documentation site | Next.js | CANVAS, SCRIBE, PIXEL |
+| [sagesyn-protocols](https://github.com/sagesyn/sagesyn-protocols) | Protocol adapters | Rust + TypeScript | BRIDGE, RUST |
+| [sagesyn-registry](https://github.com/sagesyn/sagesyn-registry) | Package registry | Rust + React | RUST, CANVAS |
+| [sagesyn-examples](https://github.com/sagesyn/sagesyn-examples) | Example projects | .ssag | NEXUS, SCRIBE |
+| [sagesyn-team](https://github.com/sagesyn/sagesyn-team) | Development plugin | Markdown + TS | ATLAS |
 
 ## Installation
 
@@ -62,6 +99,8 @@ Agents are automatically triggered based on your requests. You can also explicit
 - Ask about architecture → FORGE agent
 - Need Rust implementation → RUST agent
 - Want to coordinate work → ATLAS agent
+- Need documentation → SCRIBE agent
+- Security review → VAULT agent
 
 ### Skills
 
@@ -79,8 +118,18 @@ sagesyn-team/
 │   └── plugin.json          # Plugin manifest
 ├── agents/
 │   ├── atlas-orchestrator.md
+│   ├── sage-product.md
 │   ├── forge-architect.md
-│   └── rust-backend.md
+│   ├── pixel-design.md
+│   ├── canvas-frontend.md
+│   ├── rust-backend.md
+│   ├── bridge-protocols.md
+│   ├── sentinel-qa.md
+│   ├── pipeline-devops.md
+│   ├── scribe-documentation.md
+│   ├── nexus-devrel.md
+│   ├── vault-security.md
+│   └── herald-marketing.md
 ├── commands/
 │   ├── atlas/
 │   │   └── plan-sprint.md
