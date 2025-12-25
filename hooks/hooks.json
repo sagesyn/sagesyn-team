@@ -1,0 +1,14 @@
+{
+  "hooks": [
+    {
+      "event": "SessionStart",
+      "matcher": "*",
+      "hooks": [
+        {
+          "type": "prompt",
+          "prompt": "SageSyn Team plugin is active. Use /team-status to see the current team overview and roadmap phase. Available agents: ATLAS (orchestrator), FORGE (architect), RUST (backend)."
+        }
+      ]
+    }
+  ]
+}

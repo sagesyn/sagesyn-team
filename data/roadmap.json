@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Language Foundation",
+    "quarter": "Q1 2026",
+    "goal": "Core Language & TypeScript Compiler",
+    "description": "Establish the Agent Programming Language specification, build the core parser, and deliver the first compiler target: TypeScript.",
+    "milestones": [
+      {
+        "id": "1.1",
+        "name": "Language Specification",
+        "description": "Complete .ssag syntax specification and grammar",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.2",
+        "name": "Parser & AST",
+        "description": "Rust-based parser with full syntax support",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.3",
+        "name": "TypeScript Compiler",
+        "description": "First compiler target with full type safety",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.4",
+        "name": "LSP Core",
+        "description": "Basic language server with diagnostics",
+        "status": "upcoming"
+      }
+    ],
+    "keyDeliverables": [
+      "Agent Language Specification v0.1",
+      "sagesyn CLI with compile command",
+      "TypeScript code generation",
+      "Basic LSP server for syntax highlighting",
+      "VSCode extension (preview)"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Multi-Target & IDE",
+    "quarter": "Q2 2026",
+    "goal": "Python/Go Compilers & Visual IDE",
+    "description": "Expand compilation targets to Python and Go. Launch the visual IDE for designing agent workflows with .ssag file generation.",
+    "milestones": [
+      {
+        "id": "2.1",
+        "name": "Python Compiler",
+        "description": "Full Python target for ML/AI ecosystems",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.2",
+        "name": "Go Compiler",
+        "description": "High-performance Go target",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.3",
+        "name": "Visual IDE Alpha",
+        "description": "Tauri-based IDE with visual canvas",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.4",
+        "name": "LSP Complete",
+        "description": "Full LSP with autocompletion, hover, go-to-definition",
+        "status": "upcoming"
+      }
+    ],
+    "keyDeliverables": [
+      "Python runtime (@sagesyn/runtime-py)",
+      "Go runtime (sagesyn-go)",
+      "Visual IDE with workflow designer",
+      "Full LSP support in VSCode, Vim, Neovim",
+      "Live .ssag file preview"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Protocols & Runtime",
+    "quarter": "Q3 2026",
+    "goal": "v1.0 Stable Release",
+    "description": "Implement MCP, A2A, and AG-UI as first-class language constructs. Production-ready runtime with debugging and tracing.",
+    "milestones": [
+      {
+        "id": "3.1",
+        "name": "MCP Primitives",
+        "description": "Native MCP server declarations in .ssag files",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.2",
+        "name": "A2A Primitives",
+        "description": "Agent discovery and communication constructs",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.3",
+        "name": "AG-UI Primitives",
+        "description": "Event streaming to frontends as language feature",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.4",
+        "name": "v1.0 Release",
+        "description": "Production-ready language and tooling",
+        "status": "upcoming"
+      }
+    ],
+    "keyDeliverables": [
+      "Protocol primitives in language spec",
+      "Runtime debugging with source maps",
+      "Execution trace and replay",
+      "Comprehensive documentation",
+      "v1.0.0 stable release"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Ecosystem & Enterprise",
+    "quarter": "Q4 2026",
+    "goal": "Package Registry & Cloud Compilation",
+    "description": "Launch the agent package registry for sharing .ssag modules. Cloud compilation service for CI/CD integration.",
+    "milestones": [
+      {
+        "id": "4.1",
+        "name": "Package Registry",
+        "description": "npm-like registry for .ssag modules",
+        "status": "upcoming"
+      },
+      {
+        "id": "4.2",
+        "name": "Cloud Compiler",
+        "description": "Hosted compilation service with API",
+        "status": "upcoming"
+      },
+      {
+        "id": "4.3",
+        "name": "Enterprise Features",
+        "description": "SSO, audit logs, private registries",
+        "status": "upcoming"
+      },
+      {
+        "id": "4.4",
+        "name": "IDE Plugins",
+        "description": "Plugin system for IDE extensibility",
+        "status": "upcoming"
+      }
+    ],
+    "keyDeliverables": [
+      "registry.sagesyn.ai package registry",
+      "sagesyn publish command",
+      "Cloud compilation API",
+      "GitHub Actions integration",
+      "Enterprise SSO and RBAC"
+    ]
+  }
+]

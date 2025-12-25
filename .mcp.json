@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "sagesyn-context": {
+      "command": "bun",
+      "args": ["run", "${CLAUDE_PLUGIN_ROOT}/servers/sagesyn-context-mcp/index.ts"],
+      "env": {
+        "SAGESYN_DATA_DIR": "${CLAUDE_PLUGIN_ROOT}/data"
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+// Basic SageSyn Agent Example
+// A simple weather agent demonstrating core concepts
+
+agent WeatherAgent {
+  description: "Provides weather information for any city"
+  version: "1.0.0"
+
+  // Model configuration
+  model:
+    provider: anthropic
+    name: claude-sonnet-4
+    context_window: 128000
+    temperature: 0.7
+
+  // Agent state
+  state {
+    last_query: optional<string>
+    cache: record<string, WeatherData>
+  }
+
+  // MCP server for weather data
+  protocols:
+    mcp:
+      servers:
+        - name: weather_api
+          transport: http
+          url: "https://mcp.example.com/weather"
+
+  // Tool definition bound to MCP
+  tool get_weather(city: string) -> WeatherData {
+    description: "Get current weather for a city"
+    mcp_server: weather_api
+    mcp_tool: current_weather
+  }
+
+  // Tool for formatting
+  tool format_weather(data: WeatherData) -> string {
+    description: "Format weather data as readable text"
+
+    return `
+      Weather in ${data.city}:
+      Temperature: ${data.temp}°F
+      Conditions: ${data.conditions}
+      Humidity: ${data.humidity}%
+    `
+  }
+
+  // Handle user messages
+  on user_message {
+    // Update state
+    state.last_query = message.content
+
+    // Check cache first
+    if state.cache.has(message.city) {
+      let cached = state.cache[message.city]
+      emit response(format_weather(cached))
+      return
+    }
+
+    // Fetch fresh data
+    let weather = get_weather(message.city)
+
+    // Cache the result
+    state.cache.set(message.city, weather)
+
+    // Send response
+    emit response(format_weather(weather))
+  }
+}
+
+// Type definitions
+type WeatherData {
+  city: string
+  temp: number
+  conditions: string
+  humidity: number
+  wind_speed: number
+  timestamp: timestamp
+}
