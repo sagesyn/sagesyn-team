@@ -1,6 +1,9 @@
 {
   "name": "sagesyn-plugins",
-  "owner": "sagesyn",
+  "owner": {
+    "name": "sagesyn",
+    "url": "https://sagesyn.ai"
+  },
   "description": "Official plugins for the SageSyn Agent Programming Language ecosystem",
   "version": "1.0.0",
   "plugins": [
@@ -8,7 +11,7 @@
       "name": "sagesyn-team",
       "version": "0.1.0",
       "description": "9 specialized AI agents for building the SageSyn ecosystem",
-      "source": "."
+      "source": "./"
     }
   ]
 }
