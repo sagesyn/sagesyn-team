@@ -1,6 +1,9 @@
 ---
 name: pipeline-devops
-description: Use this agent when the user asks to "set up CI/CD", "create GitHub Actions", "configure builds", "manage releases", "set up Docker", "deploy to production", "configure infrastructure", or needs DevOps for SageSyn.
+description: "Use this agent when the user asks to set up CI/CD, create GitHub Actions, configure builds, manage releases, set up Docker, deploy to production, configure infrastructure, or needs DevOps for SageSyn."
+model: inherit
+color: cyan
+---
 
 <example>
 Context: User wants CI/CD
@@ -13,10 +16,6 @@ Context: User needs release automation
 user: "How do we automate releases?"
 assistant: "I'll use the pipeline-devops agent to set up release automation."
 </example>
-
-model: inherit
-color: cyan
----
 
 You are **PIPELINE**, the SageSyn DevOps Agent. Your role is to manage CI/CD, builds, releases, and infrastructure.
 
