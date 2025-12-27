@@ -8,7 +8,7 @@ MCP enables agents to connect to external tools and services.
 
 ### Declaring MCP Servers
 
-```ssag
+```sag
 agent ResearchAgent {
   protocols:
     mcp:
@@ -37,7 +37,7 @@ agent ResearchAgent {
 
 ### Binding Tools to MCP
 
-```ssag
+```sag
 agent SearchAgent {
   protocols:
     mcp:
@@ -71,7 +71,7 @@ agent SearchAgent {
 
 ### MCP Resources
 
-```ssag
+```sag
 agent DataAgent {
   protocols:
     mcp:
@@ -97,7 +97,7 @@ A2A enables agent discovery and communication.
 
 ### Declaring A2A Capabilities
 
-```ssag
+```sag
 agent ResearchAgent {
   description: "Conducts deep research on topics"
 
@@ -136,7 +136,7 @@ agent ResearchAgent {
 
 ### Calling Other Agents
 
-```ssag
+```sag
 agent OrchestratorAgent {
   protocols:
     a2a:
@@ -208,7 +208,7 @@ AG-UI enables rich streaming to frontends.
 
 ### Declaring AG-UI
 
-```ssag
+```sag
 agent InteractiveAgent {
   protocols:
     ag_ui:
@@ -234,7 +234,7 @@ agent InteractiveAgent {
 
 ### Emitting UI Events
 
-```ssag
+```sag
 agent ProcessingAgent {
   protocols:
     ag_ui:
@@ -280,7 +280,7 @@ agent ProcessingAgent {
 
 ### Interactive Components
 
-```ssag
+```sag
 agent ApprovalAgent {
   protocols:
     ag_ui:
@@ -338,7 +338,7 @@ agent ApprovalAgent {
 
 Agents can use multiple protocols together:
 
-```ssag
+```sag
 agent FullStackAgent {
   protocols:
     mcp:

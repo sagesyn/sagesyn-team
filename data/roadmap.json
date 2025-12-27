@@ -9,7 +9,7 @@
       {
         "id": "1.1",
         "name": "Language Specification",
-        "description": "Complete .ssag syntax specification and grammar",
+        "description": "Complete .sag syntax specification and grammar",
         "status": "upcoming"
       },
       {
@@ -33,7 +33,7 @@
     ],
     "keyDeliverables": [
       "Agent Language Specification v0.1",
-      "sagesyn CLI with compile command",
+      "sag CLI with compile command",
       "TypeScript code generation",
       "Basic LSP server for syntax highlighting",
       "VSCode extension (preview)"
@@ -44,7 +44,7 @@
     "name": "Multi-Target & IDE",
     "quarter": "Q2 2026",
     "goal": "Python/Go Compilers & Visual IDE",
-    "description": "Expand compilation targets to Python and Go. Launch the visual IDE for designing agent workflows with .ssag file generation.",
+    "description": "Expand compilation targets to Python and Go. Launch the visual IDE for designing agent workflows with .sag file generation.",
     "milestones": [
       {
         "id": "2.1",
@@ -76,7 +76,7 @@
       "Go runtime (sagesyn-go)",
       "Visual IDE with workflow designer",
       "Full LSP support in VSCode, Vim, Neovim",
-      "Live .ssag file preview"
+      "Live .sag file preview"
     ]
   },
   {
@@ -89,7 +89,7 @@
       {
         "id": "3.1",
         "name": "MCP Primitives",
-        "description": "Native MCP server declarations in .ssag files",
+        "description": "Native MCP server declarations in .sag files",
         "status": "upcoming"
       },
       {
@@ -124,12 +124,12 @@
     "name": "Ecosystem & Enterprise",
     "quarter": "Q4 2026",
     "goal": "Package Registry & Cloud Compilation",
-    "description": "Launch the agent package registry for sharing .ssag modules. Cloud compilation service for CI/CD integration.",
+    "description": "Launch the agent package registry for sharing .sag modules. Cloud compilation service for CI/CD integration.",
     "milestones": [
       {
         "id": "4.1",
         "name": "Package Registry",
-        "description": "npm-like registry for .ssag modules",
+        "description": "npm-like registry for .sag modules",
         "status": "upcoming"
       },
       {
@@ -153,7 +153,7 @@
     ],
     "keyDeliverables": [
       "registry.sagesyn.ai package registry",
-      "sagesyn publish command",
+      "sag publish command",
       "Cloud compilation API",
       "GitHub Actions integration",
       "Enterprise SSO and RBAC"

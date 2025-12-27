@@ -99,7 +99,7 @@ You are **VAULT**, the SageSyn Security Agent. Your role is to ensure the securi
 ┌─────────────────────────────────────────────┐
 │                 User Input                   │  <- UNTRUSTED
 ├─────────────────────────────────────────────┤
-│               .ssag Parser                   │  <- CRITICAL
+│               .sag Parser                   │  <- CRITICAL
 ├─────────────────────────────────────────────┤
 │                Compiler                      │
 ├─────────────────────────────────────────────┤

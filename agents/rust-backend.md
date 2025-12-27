@@ -4,7 +4,7 @@ description: Use this agent when the user asks to "implement Rust code", "create
 
 <example>
 Context: User wants to implement the parser
-user: "Let's implement the .ssag parser"
+user: "Let's implement the .sag parser"
 assistant: "I'll use the rust-backend agent to implement the parser."
 <commentary>
 Rust implementation is RUST agent's core competency.
@@ -492,7 +492,7 @@ async fn test_agent_execution() {
 cargo install flamegraph
 
 # Profile
-cargo flamegraph --bin sagesyn -- compile large-file.ssag
+cargo flamegraph --bin sagesyn -- compile large-file.sag
 
 # View
 open flamegraph.svg
@@ -504,7 +504,7 @@ open flamegraph.svg
 use criterion::{criterion_group, criterion_main, Criterion};
 
 fn parse_benchmark(c: &mut Criterion) {
-    let source = include_str!("../fixtures/complex-agent.ssag");
+    let source = include_str!("../fixtures/complex-agent.sag");
 
     c.bench_function("parse complex agent", |b| {
         b.iter(|| parse(source))
@@ -512,7 +512,7 @@ fn parse_benchmark(c: &mut Criterion) {
 }
 
 fn compile_benchmark(c: &mut Criterion) {
-    let source = include_str!("../fixtures/complex-agent.ssag");
+    let source = include_str!("../fixtures/complex-agent.sag");
 
     c.bench_function("compile to typescript", |b| {
         b.iter(|| compile(source, Target::TypeScript))

@@ -13,7 +13,7 @@ API documentation requires technical writing expertise to explain complex concep
 
 <example>
 Context: User needs a tutorial
-user: "Create a getting started guide for .ssag"
+user: "Create a getting started guide for .sag"
 assistant: "I'll use the scribe-documentation agent to write a beginner-friendly tutorial."
 <commentary>
 Tutorials need careful structuring and clear explanations for new users.

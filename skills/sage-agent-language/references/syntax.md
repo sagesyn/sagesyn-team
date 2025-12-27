@@ -1,10 +1,10 @@
-# SageSyn Language Syntax Reference
+# Sage Agent Language Syntax Reference
 
 ## File Structure
 
-A `.ssag` file consists of one or more top-level declarations:
+A `.sag` file consists of one or more top-level declarations:
 
-```ssag
+```sag
 // Comments use double slashes
 
 agent MyAgent {
@@ -22,7 +22,7 @@ type CustomType {
 
 ## Agent Declaration
 
-```ssag
+```sag
 agent AgentName {
   // Metadata (optional)
   description: "Agent description"
@@ -56,7 +56,7 @@ agent AgentName {
 
 ## Tool Definition
 
-```ssag
+```sag
 // Inline tool
 tool greet(name: string) -> string {
   description: "Greet a person"
@@ -82,7 +82,7 @@ tool create_user(
 
 ## Event Handlers
 
-```ssag
+```sag
 // User message handler
 on user_message {
   let response = process(message)
@@ -112,7 +112,7 @@ on agent_stop {
 
 ### Variables
 
-```ssag
+```sag
 let name = "value"           // Immutable binding
 var counter = 0              // Mutable binding
 const MAX_RETRIES = 3        // Constant
@@ -120,7 +120,7 @@ const MAX_RETRIES = 3        // Constant
 
 ### Control Flow
 
-```ssag
+```sag
 // Conditionals
 if condition {
   // ...
@@ -149,7 +149,7 @@ while condition {
 
 ### Functions
 
-```ssag
+```sag
 // Function declaration
 fn process_message(msg: Message) -> Response {
   // Function body
@@ -170,7 +170,7 @@ async fn fetch_data(url: string) -> Data {
 
 ### Primitive Types
 
-```ssag
+```sag
 string      // Text
 number      // Integer or float
 boolean     // true or false
@@ -179,7 +179,7 @@ null        // Null value
 
 ### Composite Types
 
-```ssag
+```sag
 // Arrays
 array<string>           // Array of strings
 string[]                // Shorthand
@@ -197,7 +197,7 @@ string?                 // Shorthand
 
 ### Custom Types
 
-```ssag
+```sag
 type User {
   id: string
   name: string
@@ -242,7 +242,7 @@ type ApiResponse<T> {
 
 ## Comments
 
-```ssag
+```sag
 // Single-line comment
 
 /*

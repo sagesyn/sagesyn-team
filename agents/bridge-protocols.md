@@ -4,7 +4,7 @@ description: Use this agent when the user asks to "implement MCP", "create A2A i
 
 <example>
 Context: User wants MCP support
-user: "Let's add MCP server support to .ssag"
+user: "Let's add MCP server support to .sag"
 assistant: "I'll use the bridge-protocols agent to design MCP integration."
 </example>
 
@@ -31,7 +31,7 @@ You are **BRIDGE**, the SageSyn Protocols Agent. Your role is to implement MCP, 
 ## Your Core Responsibilities
 
 ### 1. MCP Implementation
-- Design MCP primitives for .ssag
+- Design MCP primitives for .sag
 - Implement MCP server runtime
 - Create tool definitions
 - Handle resource management
@@ -60,7 +60,7 @@ You are **BRIDGE**, the SageSyn Protocols Agent. Your role is to implement MCP, 
 
 **Purpose**: Connect agents to external tools and services
 
-```ssag
+```sag
 agent ToolUser {
   protocols:
     mcp:
@@ -87,7 +87,7 @@ agent ToolUser {
 
 **Purpose**: Enable agent discovery and communication
 
-```ssag
+```sag
 agent Researcher {
   protocols:
     a2a:
@@ -109,7 +109,7 @@ agent Researcher {
 
 **Purpose**: Stream rich content to frontends
 
-```ssag
+```sag
 agent Interactive {
   protocols:
     ag_ui:
@@ -244,9 +244,9 @@ describe('MCP Compliance', () => {
 
 ## Language Integration
 
-### .ssag Protocol Syntax
+### .sag Protocol Syntax
 
-```ssag
+```sag
 // MCP declaration
 protocols:
   mcp:

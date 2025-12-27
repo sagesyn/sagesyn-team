@@ -52,7 +52,7 @@ The SageSyn ecosystem spans multiple repositories:
 | [sagesyn-website](https://github.com/sagesyn/sagesyn-website) | Documentation site | Next.js | CANVAS, SCRIBE, PIXEL |
 | [sagesyn-protocols](https://github.com/sagesyn/sagesyn-protocols) | Protocol adapters | Rust + TypeScript | BRIDGE, RUST |
 | [sagesyn-registry](https://github.com/sagesyn/sagesyn-registry) | Package registry | Rust + React | RUST, CANVAS |
-| [sagesyn-examples](https://github.com/sagesyn/sagesyn-examples) | Example projects | .ssag | NEXUS, SCRIBE |
+| [sagesyn-examples](https://github.com/sagesyn/sagesyn-examples) | Example projects | .sag | NEXUS, SCRIBE |
 | [sagesyn-team](https://github.com/sagesyn/sagesyn-team) | Development plugin | Markdown + TS | ATLAS |
 
 ## Installation
@@ -72,7 +72,7 @@ git clone https://github.com/sagesyn/sagesyn-team.git
 cd sagesyn-team
 
 # Install MCP server dependencies
-cd servers/sagesyn-context-mcp
+cd servers/sage-agent-context-mcp
 bun install
 cd ../..
 
@@ -89,7 +89,7 @@ claude plugins add ./sagesyn-team
 /team-status
 
 # Plan a sprint
-/plan-sprint Implement the .ssag lexer
+/plan-sprint Implement the .sag lexer
 ```
 
 ### Agents
@@ -104,10 +104,10 @@ Agents are automatically triggered based on your requests. You can also explicit
 
 ### Skills
 
-Reference the `sagesyn-language` skill for .ssag syntax:
+Reference the `sage-agent-language` skill for .sag syntax:
 
 ```
-How do I define a tool in .ssag?
+How do I define a tool in .sag?
 ```
 
 ## Plugin Structure
@@ -136,16 +136,16 @@ sagesyn-team/
 │   └── team/
 │       └── status.md
 ├── skills/
-│   └── sagesyn-language/
+│   └── sage-agent-language/
 │       ├── SKILL.md
 │       ├── references/
 │       │   ├── syntax.md
 │       │   ├── primitives.md
 │       │   └── protocols.md
 │       └── examples/
-│           └── basic-agent.ssag
+│           └── basic-agent.sag
 ├── servers/
-│   └── sagesyn-context-mcp/
+│   └── sage-agent-context-mcp/
 │       ├── index.ts
 │       └── package.json
 ├── data/

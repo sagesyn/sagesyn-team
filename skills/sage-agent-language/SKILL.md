@@ -1,16 +1,16 @@
 ---
-name: SageSyn Language
-description: This skill should be used when the user asks to "write .ssag code", "understand agent syntax", "create agent definitions", "use language primitives", "compile agents", "define tools", "create handlers", or needs guidance on the Agent Programming Language syntax, semantics, or compilation.
+name: Sage Agent Language
+description: This skill should be used when the user asks to "write .sag code", "understand agent syntax", "create agent definitions", "use language primitives", "compile agents", "define tools", "create handlers", or needs guidance on the Sage Agent Programming Language syntax, semantics, or compilation.
 version: 0.1.0
 ---
 
-# SageSyn Agent Programming Language
+# Sage Agent Programming Language
 
-The Agent Programming Language (`.ssag`) is a domain-specific language for defining AI agents that compile to TypeScript, Python, or Go.
+The Sage Agent Programming Language (`.sag`) is a domain-specific language for defining AI agents that compile to TypeScript, Python, or Go.
 
 ## Language Overview
 
-**File Extension**: `.ssag`
+**File Extension**: `.sag`
 **Paradigm**: Declarative, event-driven
 **Typing**: Static, structural
 
@@ -18,7 +18,7 @@ The Agent Programming Language (`.ssag`) is a domain-specific language for defin
 
 ### Agent Definition
 
-```ssag
+```sag
 agent WeatherAgent {
   description: "Provides weather information"
   version: "1.0.0"
@@ -63,19 +63,19 @@ See `references/protocols.md` for MCP, A2A, and AG-UI syntax.
 
 ```bash
 # Compile to TypeScript
-sagesyn compile agent.ssag --target typescript
+sag compile agent.sag --target typescript
 
 # Compile to Python
-sagesyn compile agent.ssag --target python
+sag compile agent.sag --target python
 
 # Compile to Go
-sagesyn compile agent.ssag --target go
+sag compile agent.sag --target go
 
 # Validate syntax only
-sagesyn check agent.ssag
+sag check agent.sag
 
 # Run directly (development)
-sagesyn run agent.ssag --input '{"message": "hello"}'
+sag run agent.sag --input '{"message": "hello"}'
 ```
 
 ## Additional Resources
@@ -86,6 +86,6 @@ sagesyn run agent.ssag --input '{"message": "hello"}'
 - **`references/protocols.md`** - Protocol integration
 
 ### Examples
-- **`examples/basic-agent.ssag`** - Simple agent
-- **`examples/multi-agent.ssag`** - Multi-agent system
-- **`examples/mcp-server.ssag`** - MCP server agent
+- **`examples/basic-agent.sag`** - Simple agent
+- **`examples/multi-agent.sag`** - Multi-agent system
+- **`examples/mcp-server.sag`** - MCP server agent

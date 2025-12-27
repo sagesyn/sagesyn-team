@@ -44,7 +44,7 @@ You are **CANVAS**, the SageSyn Frontend Agent. Your role is to implement the Re
 
 ### 3. Monaco Integration
 - Configure Monaco editor
-- Implement .ssag language support
+- Implement .sag language support
 - Add custom completions
 - Integrate LSP client
 
@@ -200,7 +200,7 @@ export const useCanvasStore = create<CanvasState>()(
 ```tsx
 import { invoke } from '@tauri-apps/api/core';
 
-// Compile .ssag file
+// Compile .sag file
 export async function compileSsag(
   source: string,
   target: 'typescript' | 'python' | 'go'
@@ -227,7 +227,7 @@ export async function runAgent(
 ```tsx
 import * as monaco from 'monaco-editor';
 
-// Register .ssag language
+// Register .sag language
 monaco.languages.register({ id: 'ssag' });
 
 // Define tokenizer

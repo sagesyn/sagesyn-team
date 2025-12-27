@@ -4,7 +4,7 @@
 
 ### String Operations
 
-```ssag
+```sag
 // Concatenation
 let greeting = "Hello, " + name
 
@@ -25,7 +25,7 @@ string.ends_with(s)     // Check suffix
 
 ### Number Operations
 
-```ssag
+```sag
 // Arithmetic
 a + b                   // Addition
 a - b                   // Subtraction
@@ -44,7 +44,7 @@ number.to_string()      // Convert to string
 
 ### Array Operations
 
-```ssag
+```sag
 // Creation
 let arr = [1, 2, 3]
 let empty: array<number> = []
@@ -81,7 +81,7 @@ arr.sort(fn)            // Sort
 
 ### Record Operations
 
-```ssag
+```sag
 // Creation
 let obj = { name: "Alice", age: 30 }
 let empty: record<string, any> = {}
@@ -104,7 +104,7 @@ obj.has(key)            // Check key exists
 
 ### Context
 
-```ssag
+```sag
 // Agent context
 context.agent_id        // Current agent ID
 context.session_id      // Session ID
@@ -120,7 +120,7 @@ context.turn_count      // Turn number
 
 ### Events
 
-```ssag
+```sag
 // Emit events
 emit response(data)           // Send response
 emit error(message)           // Send error
@@ -144,7 +144,7 @@ type ToolEvent {
 
 ### Workflow Primitives
 
-```ssag
+```sag
 // Perceive - gather input
 perceive {
   from: trigger.user_input
@@ -175,7 +175,7 @@ respond {
 
 ### MCP (Model Context Protocol)
 
-```ssag
+```sag
 // MCP server declaration
 protocols:
   mcp:
@@ -197,7 +197,7 @@ tool search(query: string) -> Results {
 
 ### A2A (Agent-to-Agent)
 
-```ssag
+```sag
 // A2A configuration
 protocols:
   a2a:
@@ -219,7 +219,7 @@ let result = await a2a.call(
 
 ### AG-UI (Agent-User Interface)
 
-```ssag
+```sag
 // AG-UI configuration
 protocols:
   ag_ui:
@@ -239,7 +239,7 @@ emit ag_ui.markdown({ content: "## Results\n..." })
 
 ### JSON
 
-```ssag
+```sag
 json.parse(string)      // Parse JSON string
 json.stringify(value)   // Convert to JSON string
 json.valid(string)      // Check if valid JSON
@@ -247,7 +247,7 @@ json.valid(string)      // Check if valid JSON
 
 ### HTTP
 
-```ssag
+```sag
 http.get(url, options)      // GET request
 http.post(url, body, opts)  // POST request
 http.put(url, body, opts)   // PUT request
@@ -256,7 +256,7 @@ http.delete(url, opts)      // DELETE request
 
 ### Time
 
-```ssag
+```sag
 time.now()              // Current timestamp
 time.parse(string)      // Parse time string
 time.format(ts, fmt)    // Format timestamp
@@ -266,7 +266,7 @@ time.add(ts, duration)  // Add duration
 
 ### Logging
 
-```ssag
+```sag
 log.debug(message)      // Debug level
 log.info(message)       // Info level
 log.warn(message)       // Warning level

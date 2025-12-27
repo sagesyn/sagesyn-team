@@ -157,7 +157,7 @@ Each day, track progress:
 
 ## Example
 
-**Input**: `/plan-sprint Implement the .ssag lexer and basic parser`
+**Input**: `/plan-sprint Implement the .sag lexer and basic parser`
 
 **Creates sprint with**:
 - FORGE tasks: Parser architecture design, AST node specification
@@ -170,4 +170,4 @@ Each day, track progress:
 The sprint plan should reference:
 - **Phase 1 Milestones**: 1.1 Language Spec, 1.2 Parser & AST, 1.3 TS Compiler, 1.4 LSP Core
 - **Tech Stack**: Rust (logos + nom), TypeScript targets
-- **Crate Structure**: sagesyn-parser, sagesyn-ast, sagesyn-compiler
+- **Crate Structure**: sag-parser, sag-lexer, sag-codegen

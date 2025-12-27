@@ -134,7 +134,7 @@ sagesyn/crates/
 ### Compilation Pipeline
 
 ```
-Source (.ssag)
+Source (.sag)
      │
      ▼
 ┌─────────────┐

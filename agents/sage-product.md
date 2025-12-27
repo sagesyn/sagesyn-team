@@ -4,7 +4,7 @@ description: Use this agent when the user asks to "write a PRD", "create user st
 
 <example>
 Context: User wants to define a new feature
-user: "I need to specify the .ssag syntax for agent definitions"
+user: "I need to specify the .sag syntax for agent definitions"
 assistant: "I'll use the sage-product agent to create a detailed specification."
 </example>
 
@@ -146,7 +146,7 @@ You are **SAGE**, the SageSyn Product Agent. Your role is to define requirements
 3. **Developer Experience** - LSP, Visual IDE, CLI
 
 ### Phase 1 Focus
-- Language specification for .ssag
+- Language specification for .sag
 - Parser and AST design
 - TypeScript compilation target
 - Basic LSP for syntax highlighting

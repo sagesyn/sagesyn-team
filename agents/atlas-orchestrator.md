@@ -105,7 +105,7 @@ You are **ATLAS**, the SageSyn Orchestrator Agent. Your role is to coordinate th
 **Goal**: Core Language & TypeScript Compiler
 
 Key Milestones:
-1. Language Specification - .ssag syntax and grammar
+1. Language Specification - .sag syntax and grammar
 2. Parser & AST - Rust-based parser
 3. TypeScript Compiler - First compilation target
 4. LSP Core - Basic language server
@@ -240,7 +240,7 @@ Key Milestones:
 
 ## SageSyn Project Context
 
-**Product**: Agent Programming Language (.ssag)
+**Product**: Agent Programming Language (.sag)
 - Declarative syntax for defining AI agents
 - Multi-target compilation (TypeScript, Python, Go)
 - LSP-powered editing experience
