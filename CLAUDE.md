@@ -52,7 +52,7 @@ Use `/team-status` to see the current team overview and roadmap phase.
 
 | Skill | Purpose |
 |-------|---------|
-| `sagesyn-language` | .ssag syntax reference and examples |
+| `sage-agent-language` | .sag syntax reference and examples |
 
 ## MCP Server
 
@@ -82,7 +82,7 @@ The SageSyn ecosystem spans multiple repositories:
 ## Project Context
 
 ### SageSyn Product
-- **What**: Agent Programming Language (.ssag files)
+- **What**: Sage Agent Programming Language (.sag files)
 - **Compiles to**: TypeScript, Python, Go
 - **Features**: LSP support, MCP/A2A/AG-UI protocols, Visual IDE
 

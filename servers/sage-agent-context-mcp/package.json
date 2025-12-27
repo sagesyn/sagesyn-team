@@ -1,7 +1,7 @@
 {
-  "name": "sagesyn-context-mcp",
+  "name": "sage-agent-context-mcp",
   "version": "0.1.0",
-  "description": "MCP server for SageSyn project context and roadmap",
+  "description": "MCP server for Sage Agent project context and roadmap",
   "type": "module",
   "main": "index.ts",
   "scripts": {

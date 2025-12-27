@@ -350,7 +350,7 @@ services:
       - ./examples:/workspace
     environment:
       - RUST_LOG=info
-    command: ["compile", "/workspace/agent.ssag", "--target", "typescript"]
+    command: ["compile", "/workspace/agent.sag", "--target", "typescript"]
 
   dev:
     build:

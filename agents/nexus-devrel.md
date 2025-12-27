@@ -4,7 +4,7 @@ description: Use this agent when the user asks to "create examples", "build a de
 
 <example>
 Context: User wants to create example projects
-user: "Let's create some example .ssag projects for the docs"
+user: "Let's create some example .sag projects for the docs"
 assistant: "I'll use the nexus-devrel agent to design compelling, educational examples."
 <commentary>
 Example projects need to balance simplicity with real-world applicability.
@@ -22,7 +22,7 @@ Conference talks need to tell a story and inspire developers.
 
 <example>
 Context: User wants community feedback
-user: "What are developers struggling with in .ssag?"
+user: "What are developers struggling with in .sag?"
 assistant: "I'll use the nexus-devrel agent to analyze community feedback and pain points."
 <commentary>
 Understanding developer pain points helps improve the product.
@@ -102,7 +102,7 @@ examples/
 
 ### Example Template
 
-```ssag
+```sag
 // Example: [Name]
 // Description: [One-line description]
 // Difficulty: [Beginner | Intermediate | Advanced]
